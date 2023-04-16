@@ -1,0 +1,147 @@
+\documentclass[11pt,a4paper,fleqn]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english,francais]{babel}
+\author{Elie G\'ed\'eon}
+\title{DM 07}
+\begin{document}
+\maketitle
+
+\part*{Probl\`eme 1}
+
+\begin{enumerate}
+	\item
+
+  G n'est pas discret
+  \[  \Leftrightarrow \forall \alpha \in \mathbf{R^+_*}, G \cap \rbrack 0, \alpha \lbrack \neq \emptyset  \]
+	
+	Soit $u_\alpha \in G \cap \rbrack 0, \alpha \lbrack$
+	
+	G additif et $u_\alpha \in G$
+	\[\Rightarrow \left ( \left \lfloor {x \over u_\alpha} \right \rfloor + 1 \right ) u_\alpha \in G\]
+	
+	$0 < u_\alpha < \alpha$
+	\[	\Rightarrow x \leq  {x \over u_\alpha} u_\alpha \leq
+	\left (\left \lfloor {x \over u_\alpha} \right \rfloor + 1 \right )
+	< {x \over u_\alpha} u_\alpha + u_\alpha < x + \alpha	\]
+	
+	\[	\Rightarrow \left (\left \lfloor {x \over u_\alpha} \right \rfloor + 1 \right ) \in \lbrack x, x + \alpha \lbrack	\]
+	
+	\[	\Rightarrow
+	\left (\left \lfloor {x \over u_\alpha} \right \rfloor + 1 \right )
+	\in \lbrack x, x + \alpha \lbrack \cap G	\]
+	
+	Donc $\lbrack x, x + \alpha \lbrack \cap G$ non vide
+		
+
+	\item
+		\begin{enumerate}
+			
+			\item	
+
+				Soit I un intervalle de longueur $\alpha \over 2$ qui contient au moins un \'el\'ement de $G$
+				\[\forall (x,y) \in (I \cap G)^2\]
+				\[|x - y| \leq {\alpha \over 2} ~ \textrm{et} ~ (x, y) \in G^2 \textrm{avec} ~G~ \textrm{additif} \]
+				\[\Rightarrow |x - y| \in \lbrack 0 , \alpha \lbrack ~ \textrm{et} ~ |x - y| \in G \]
+ 	 		  \[\textrm{or} ~ G \cap \rbrack 0 , \alpha \lbrack ~ \textrm{est vide} \]
+	 	 		\[\Rightarrow x = y \]
+ 	 			 	 		
+ 	 			D'o\`u $I \cap G$ contient au plus un \'el\'ement
+				
+			\item
+					
+				D\'emontrons par l'absurde que G admet un plus petit \'el\'ement
+				\newline
+				
+				Supposons que $G \cap \mathbf{R^*_+}$ n'admet pas de plus petit \'el\'ement.\\				
+				Comme	$G \cap \mathbf{R^*_+}$ est minor\'e par $0$,	$G \cap \mathbf{R^*_+}$	admet une borne inf\`erieure qui ne sera pas un minimum.
+				
+					
+			  \[\Rightarrow \forall \epsilon > 0, ~\exists (x,y) \in (G \cap \mathbf{R^*_+})^2,
+					~ inf(G \cap \mathbf{R^*_+}) < x < y < inf(G \cap \mathbf{R^*_+}) + \epsilon \]
+				
+				pour $\epsilon = inf(G \cap \mathbf{R^*_+})$, comme $y - x \in G$ on a
+				
+				\[\exists (x,y) \in (G \cap \mathbf{R^*_+})^2, 0 < y - x < inf(G \cap \mathbf{R^*_+})
+					\quad \textrm{ce qui est absurde!!} \]
+				
+				Donc $G \cap \mathbf{R^*_+}$ admet un plus petit \'el\'ement\\
+				
+								
+			\item
+				
+				\begin{itemize}
+					\item
+						$G \subset m \mathbf{Z}$ (car $m \in G$ et $G$ est un sous-groupe additif)
+					
+					\item
+						$m \mathbf{Z} \not\subset G$
+						\[\Rightarrow \exists x \in G, x \notin m \mathbf{Z}\]
+						\[\Rightarrow \exists x \in G, x - m \left \lfloor{x \over m}\right \rfloor \in \rbrack 0, m \lbrack
+							\quad \textrm{ce qui est absurde car} ~ m = min(G \cap \mathbf{R^+_*})\]
+				\end{itemize}
+				
+				Donc $G = m \mathbf{Z}$
+			
+			\end{enumerate}
+		
+		\item
+		
+			\begin{enumerate}
+				
+				\item
+					
+					\begin{itemize}
+						\item
+							$\forall (u, v) \in S^2, \exists (k, k', m, m') \in \mathbf{Z}^4,
+								\left\lbrace
+									\begin{array}{c} u = x k + y m \\ v = x k' + y m' \end{array}
+								\right.$
+							\[\Rightarrow u + v \in S ~\textrm{et}~ -u \in S ~\textrm{avec} ~ 0 \in S\]
+							Donc S est un sous groupe additif						
+						\item
+							De m\^eme, X est un sous groupe additif
+							\newline
+						\item
+							De m\^eme, Y est un sous groupe additif
+							\newline
+
+					\end{itemize}
+					
+				\item
+					S discret si et seulement si:
+					\[\exists m \in S ~tq~ S = m \mathbf{Z}\]
+					\[\Leftrightarrow \exists(k, k') \in \mathbf{Z}^2 ~tq~ x = k m ~\mathrm{et}~ y = k' m\]
+					\[\Leftrightarrow \exists(k, k') \in \mathbf{Z}^2 ~tq~ {x \over y} = {k' \over k}\]
+					\[\Leftrightarrow {x \over y} \in \mathbf{Q}\]
+				
+			\end{enumerate}
+		
+		\item
+			\begin{enumerate}
+				\item
+					$A \cap B \neq \emptyset$
+					\[\Rightarrow \exists \alpha \in A \cap B\]
+					\[\Rightarrow \exists (k, k') \in \mathbf{Z}^2 ~tq~ k x = k' y\]
+					\[\Rightarrow {x \over y} \in \mathbf{Q}\]
+					\[\textrm{Or} {x \over y} \in \mathbf{R} / \mathbf{Q}\]
+					D'o\`u $A \cap B = \emptyset$
+				
+				\item
+					\[\inf(S \cap \mathbf{R^*_+}) = 0\]
+					car $\forall \alpha \in \mathbf{R^+_*}, G \cap \rbrack 0, \alpha \lbrack \neq \emptyset$
+					
+					\[\lbrace |a-b|,(a,b)\in A \times B\rbrace = (S \cap /(X \cup Y)) \cap \mathbf{R^*_+}\] 
+					Comme
+					\begin{eqnarray*}
+						\inf(S \cap \mathbf{R^*_+}) & = & 0 \\
+						\inf(X \cap \mathbf{R^*_+}) & > & 0 (X \mathrm{discret})\\
+						\inf(Y \cap \mathbf{R^*_+}) & > & 0 (Y \mathrm{discret})
+					\end{eqnarray*}
+					
+					Alors
+					\[\inf \lbrace |a-b|,(a,b)\in A \times B\rbrace = \inf((S \cap /(X \cup Y)) \cap \mathbf{R^*_+}) = 0\]
+	
+							
+			\end{enumerate}
+			
+\end{document}

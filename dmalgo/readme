@@ -1,0 +1,17 @@
+Readme
+
+  algopar.cpp : fichier source
+  hosts : liste de machine
+  genere_host.sh : regénère hosts
+  génere_tableau.c : génère un tableau aléatoire; usage ./genere_tableau W H fichier   créé un tableau WxH dans le fichier 'fichier'
+  copie_fichier.sh : copie le tableau aléatoire généré dans /tmp : ./copie_fichier.sh fichier  copie 'fichier' dans les dossiers temporaires des machines identifiées dans hosts.
+  Makefile : make run pour lancer; changer NB_NODES pour le nombre de processus, PARAM pour le chemin du fichier
+
+
+
+Mise en oeuvre
+  gcc genere_tableau.c -Os -o genere_tableau
+  ./genere_tableau 2000 2000 test
+  ./genere_host.sh
+  ./copie_fichier.sh
+  make run

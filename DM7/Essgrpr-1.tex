@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper,fleqn]{article}
+\usepackage[T1]{fontenc}
+\usepackage[english,francais]{babel}
+\author{Elie G\'ed\'eon}
+\title{DM 07}
+\begin{document}
+\maketitle
+
+%<dscrpt>Sous-groupes additifs de R.</dscrpt>
+Un \emph{sous groupe} (additif)de $(\mathbf{R},+)$ est un ensemble de
+nombres r{\'e}els contenant 0 et stable pour l'addition et la
+sym{\'e}trisation. C'est {\`a} dire qu'une partie $G$ de $\mathbf{R}$ est un
+sous-groupe lorsque
+
+\begin{eqnarray*}
+0 &\in & G \\
+\forall (x,y) \in G^2 : x+y & \in & G \\
+\forall x \in \G : -x & \in & G
+\end{eqnarray*}
+
+Soient $A$ et $B$ deux parties de $\mathbf{R}$. On dit que $A$ est
+\emph{dense} dans $B$ lorsque pour tout $x$ dans $B$ et tout
+$\varepsilon >0$
+ \[ ]b-\varepsilon,b+\varepsilon [ \cap A \neq
+\emptyset\]
+
+ Soit $G$ un sous groupe de $(\mathbf{R},+)$, on dira que $G$ est
+\emph{discret} lorsqu'il existe un r{\'e}el $\alpha$
+\emph{strictement positif} tel que
+
+\[ G \cap ]0,\alpha[ = \emptyset \]
+
+L'objet de ce probl{\`e}me est d'{\'e}tudier les sous-groupes additifs.
+Dans toute la suite, $G$ d{\'e}signe un tel sous-groupe.
+
+\begin{enumerate}
+  \item Formuler une proposition traduisant que $G$ n'est pas discret. Montrer que si $G$ n'est pas discret
+  \[\forall x \in \mathbf{R} , \forall \alpha >0 , G\cap [x,x+\alpha[ \neq \emptyset\]
+  \item Dans cette question, on suppose que $G$ est discret. Il existe donc un r{\'e}el $\alpha$ strictement positif tel que $G\cap ]0,\alpha[$ soit vide. On suppose aussi que $G$ contient un {\'e}l{\'e}ment non nul.
+    \begin{enumerate}
+      \item Soit $I$ un intervalle de longueur $\frac{\alpha}{2}$. Montrer que $G\cap I$ contient au plus un {\'e}l{\'e}ment. Que peut-on en d{\'e}duire pour l'intersection de $G$ avec un intervalle quelconque de longueur finie ?
+      \item Montrer que $G\cap\mathbf{R_+^*}$ admet un plus petit {\'e}l{\'e}ment que l'on notera $m$.
+      \item Montrer que $G=\{km,k\in\Z\}$. Un tel ensemble sera not{\'e} $\Z m$
+    \end{enumerate}
+
+  \item Soit $x$ et $y$ deux r{\'e}els strictement positifs, on pose
+  \[X=\Z x=\{kx,k \in \Z\},\, Y=\Z y=\{ky,k\in \Z\},\, S=\{mx+ny,(m,n)\in\Z^2\}\]
+     \begin{enumerate}
+       \item V{\'e}rifier que $X$, $Y$ et $S$ sont des sous-groupes de $(\mathbf{R},+)$. On dira que $S$ est le sous-groupe
+       \emph{engendr{\'e}} par $x$ et $y$.
+       \item Montrer que $S$ est discret si et seulement si $\frac{x}{y}\in \Q$
+     \end{enumerate}
+
+  \item On suppose ici que $\frac{x}{y}$ est irrationnel, soit\[A=\{kx,k \in \Z^*\},\, B=\{ky,k \in \Z^*\}\]
+     \begin{enumerate}
+       \item Montrer que $A\cap B=\emptyset$
+       \item  Montrer que
+       \[\inf\{|a-b|,(a,b)\in A \times B\}=0\]
+     \end{enumerate}
+
+  \item En consid{\'e}rant un certain sous-groupe additif, montrer que
+  \[\{ \cos n , n\in \Z\}\]
+  est dense dans $[-1,1]$.
+
+\end{enumerate}
+\end{document}

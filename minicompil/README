@@ -1,0 +1,25 @@
+Pour exécuter les exemples, taper make
+
+Pour choisir l'appel par pile ou par valeur, il faut simplement changer dans main.ml le booleen de l'appel de engendre
+
+Quelques remarques
+- l'implémentation de la soustraction et de la division a été assez rapide, il faut juste comprendre comment on soustrait (x-y=x+(-y)), et créer un label pour traiter le cas de la division par zero)
+- pour la conditionnelle, il faut faire attention à générer des labels pour chaque conditionnelle, de manière à enlever toute ambiguïté pour l'assembleur spim. Un compteur s'incrémentant à chaque conditionnel générée préfixé de else ou de end fournit ainsi un identifiant unique.
+- Pour gérer les fonctions, une nouvelle structure a été créée, contenant une liste de fonctions terminées par le programme principal.
+   Mais quelques précautions sont nécessaires:
+     Il faut tout d'abord vérifier le non duplicata de fonctions ou de variables, puis vérifier que chaque variable et chaque appel de fonction correspondent effectivement à une variable ou une fonction existante. Un renommage des variables est utile.
+     Il faut tout d'abord faire attention à ne pas interférer avec les labels générer ci dessus. Chaque fonction est donc préfixé par fon; créer une fonction main ne bloque rien.
+     A l'appel de fonction, suivant que l'appel se fasse par pile ou par valeur, l'appellant stocke les paramètres dans la pile (ou $a1/$a2), ainsi que l'adresse de retour. L'appellé a pour seule contraintes de ne pas modifier ce qui est dans la pile. Il n'a pas à restaurer le contexte.
+     L'adresse de retour est calculé à partir d'un label unique généré pour l'occasion, de la forme call+compteur.
+     Des noms de fonction/variable sont réservés: def run if then else endif. Les utilisés génèrera une exception au parsing. Tous les autres noms sont acceptables.
+     Les fonctions récursives ne posent aucun problème, si ce n'est l'efficacité.
+- Un test d'inégalité de type 1<2 pourrait être utile, et rapide à implémenter, mais ferait s'éloigner le programme de la norme demandée.
+     
+Pour plus de détails quant à l'implémentation, se référer aux commentaires rajoutés dans les fichiers concernés
+
+Des fichiers contiennent des exemples:
+  puissance_stupide.pc    montre des appels récursifs de fonctions multiples
+  ackermann.pc            montre des appels imbriquees
+  combinaison.pc          montre des conditionnelles imbriquees
+  modulo.pc               montre l'associativite de la division, multiplication et soustraction
+

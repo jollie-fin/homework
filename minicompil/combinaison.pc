@@ -1,0 +1,1 @@
+def C(p,n)= if p=n then 1 else if p=0 then 1 else C(p-1,n-1) + C(p,n-1) endif endif; run C(4,8).

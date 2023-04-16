@@ -1,0 +1,1 @@
+def mod(x,y)=x-x/y*y; run mod(256,3).

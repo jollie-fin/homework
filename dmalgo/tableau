@@ -1,0 +1,21 @@
+6000x6000
+\begin{array}{c|c|c|c}
+Nombre de processus & temps (secondes) & accélération & accélération normalisée\\
+44 & 10 & 15,5 & 35%\\
+20 & 15,6 & 9,3 & 50%\\
+10 & 22,8 & 6,8 & 68%\\
+5 & 36,9 & 4,2 & 84%\\
+2 & 79 & 1,96 & 98%\\
+1 & 155 & 1
+\end{array}
+
+
+6000x2000
+\begin{array}{c|c|c|c}
+Nombre de processus & temps (secondes) & accélération & accélération normalisée\\
+44 & 90 & 15,6 & 36%\\
+20 & 130 & 10,8 & 54%\\
+10 & 207 & 6,8 & 68%\\
+1 & ~1407 & 1 & 1
+\end{array}
+
